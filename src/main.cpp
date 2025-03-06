@@ -17,16 +17,21 @@ struct Operations {
 
 int getResult(Operations op) {
     auto result = int();
-    switch (op.type) { // TODO: Implement operations based on sh!t
+    switch (op.type) { 
     case Operations::ADD:
+        result = op.num1 + op.num2;
         break;
     case Operations::SUB:
+        result = op.num1 - op.num2;
         break;
     case Operations::MUL:
+        result = op.num1 * op.num2;
         break;
     case Operations::DIV:
+        result = op.num1 / op.num2;
         break;
     case Operations::OTHER:
+        result = 69;
         break;
     };
     return result;
